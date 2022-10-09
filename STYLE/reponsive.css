@@ -1,0 +1,66 @@
+
+
+
+
+
+@media screen and (min-width: 576px) {
+
+    .outer {
+        padding: 4em;
+    }
+
+    .payment form>div {
+        flex-direction: row;
+    }
+
+    .payment form>div .text {
+        padding-right: 1em;
+    }
+
+    
+
+
+
+
+}
+
+@media screen and (min-width: 992px) {
+
+    header {
+        max-width: 70%;
+        padding-right: 4em;
+        margin-bottom: 0;
+    }
+
+    .payment {
+        flex-direction: row;
+        gap: 0;
+    }
+
+    .payment .left {
+        flex: 1 0 65%;
+        padding-right: 4em;
+    }
+
+    .payment .right {
+        flex: 1 0 35%;
+        align-self: flex-end;
+    }
+
+    
+
+}
+@media screen and (max-width: 992px){
+
+
+.outer::before{
+    display: none;
+}
+
+.outer::after{
+    display: none;
+}
+
+
+
+}
