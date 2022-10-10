@@ -9,6 +9,7 @@
 
 # Descrição do Projeto
 <p align="center">WEB PAYMENTS PAGE </p>
+<p align="center"> Projeto de uma pagina final de processamento de pagamentos - PROJETO EM ANDAMENTO !!! </p>
 
 
 <h1 align="center">
