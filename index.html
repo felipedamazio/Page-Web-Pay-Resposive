@@ -9,12 +9,35 @@
     <link rel="stylesheet" href="STYLE/Principal.css">
     <link rel="stylesheet" href="STYLE/reponsive.css">
     <link rel="stylesheet" href="STYLE/magicLine.css">
-    
+    <link rel="stylesheet" href="STYLE/steps.css">
+    <link rel="stylesheet" href="STYLE/modal.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
     <title>Web Payments</title>
 </head>
 
 <body>
 
+
+
+   
+    
+    <div id="steps">
+        <div class="line"></div>
+        <div class="step">
+            <i class="bi bi-person"></i>
+            <p class="">Criar conta</p>
+        </div>
+        <div class="step">
+            <i class="bi bi-geo-alt"></i>
+            <p class="">Endereço</p>
+        </div>
+        <div class="step">
+            <i class="bi bi-credit-card active"></i>
+            <p class="">Pagamento</p>
+        </div>
+    </div>
     <div id="page" class="site">
         <div class="container">
             <div class="outer">
@@ -35,7 +58,7 @@
                                 <span>Enter the 16-digit card number on the card</span>
                                 <div class="card-number-box">
                                     <input type="text" id="credit-card"
-                                        autocomplete="off" placeholder="xxxx - xxxx - xxxx - xxxx">
+                                        autocomplete="off" placeholder="xxxx - xxxx - xxxx - xxxx" required>
                                     <span class="cc-logo"></span>
                                 </div>
                             </div>
@@ -71,7 +94,7 @@
                                         oninput="this.value=this.value.slice(0,this.dataset.maxlength)" />
                                 </div>
                             </div>
-                            <button>Pay Now</button>
+                            <button id="Pay">PAY NOW</button>
                         </form>
                     </div>
                     <div class="right">
@@ -94,7 +117,7 @@
                                     C477.832,71,496,89.168,496,111.5z M55.5,71H96v17H55.5C42.542,88,32,98.542,32,111.5V128H15v-16.5C15,89.168,33.168,71,55.5,71z
                                      M15,399.5V383h17v16.5c0,12.958,10.542,23.5,23.5,23.5H96v17H55.5C33.168,440,15,421.832,15,399.5z M455.5,440H415v-17h40.5
                                     c12.958,0,23.5-10.542,23.5-23.5V383h17v16.5C496,421.832,477.832,440,455.5,440z" />
-                                    
+
                                 </svg>
                             </p>
                             <p class="highlight">
@@ -136,6 +159,7 @@
 
 
     <script src="JS/Script.js"></script>
+
 </body>
 
 </html>

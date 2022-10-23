@@ -1,3 +1,5 @@
+
+
 input_credit_card = function(input)
 {
     var format_and_pos = function(char, backspace)
