@@ -9,6 +9,7 @@
     --light-color: #8d99ae;
     --lighter-color: #edf2f4;
     --dark-color: #2b2d42;
+    --button-color: #95e069;
     --font-smaller: 12px;
     --font-bigger: 16px;
 }
@@ -176,8 +177,8 @@ header .time-left {
     font-size: var(--font-bigger);
     font-weight: 600;
     border: 0;
-    background-color: var(--main-lighter-color);
-    color: white;
+    background-color: var(--main-lighter-color);    
+    color: rgb(0, 0, 0);
     line-height: 56px;
     border-radius: 8px;
     width: 100%;
@@ -186,7 +187,8 @@ header .time-left {
 }
 
 .payment form button:hover{
-    background-color: var(--main-color);
+    background-color: var(--button-color);
+    color: white;
 }
 
 .payment .right{
