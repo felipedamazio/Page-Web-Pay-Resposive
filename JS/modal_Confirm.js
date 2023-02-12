@@ -19,7 +19,7 @@ const modalConfirm = function () {
             swal("PAGAMENTO COM SUCESSO !", {
               icon: "success",
             });
-            setTimeout(() => { document.formulario.submit();}, 1000);// aguardando 2 segundos para envio do formulario. 
+            setTimeout(() => { document.formulario.submit();}, 2000);// aguardando 2 segundos para envio do formulario. 
           } else {
             swal("PAGAMENTO CANCELADO !", {
               icon: "warning",
