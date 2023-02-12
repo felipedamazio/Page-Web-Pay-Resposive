@@ -1,25 +1,25 @@
+const modalConfirm = function () {
+  const event2 = document.querySelectorAll(".Pay");
 
-const modalConfirm = function(){
-
-const event2 = document.querySelectorAll(".Pay");
-
-if (event2) {
+  if (event2) {
     event2.forEach((el) => {
       el.addEventListener("click", function () {
         // Método swal para criar os alertas dos dowloads (biblioteca sweetalert) -----------
-        document.querySelector("form").addEventListener("click", function (event) {
-          event.preventDefault();
-        });   
+        document
+          .querySelector("form")
+          .addEventListener("click", function (event) {
+            event.preventDefault();
+          });
 
         swal({
           title: "FINALIZAR PAGAMENTO?",
-          buttons: ["Não", "Sim"],          
+          buttons: ["Não", "Sim"],
         }).then((willDelete) => {
           if (willDelete) {
             swal("PAGAMENTO COM SUCESSO !", {
               icon: "success",
-            });               
-            document.formulario.submit();         
+            });
+            setTimeout(() => { document.formulario.submit();}, 1000);           
           } else {
             swal("ERRO COM SEU PAGAMENTO !", {
               icon: "warning",
@@ -29,5 +29,9 @@ if (event2) {
       });
     });
   }
-}
+};
+
+setTimeout(() => { }, 10000);
+
 modalConfirm();
+
