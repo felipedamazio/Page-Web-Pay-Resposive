@@ -31,9 +31,5 @@ const modalConfirm = function () {
   }
 };
 
-const input = document.querySelector("input")
-console.log(input.hasChildNodes()) // false
-
-
 modalConfirm();
 
