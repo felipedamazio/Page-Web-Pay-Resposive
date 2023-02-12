@@ -21,7 +21,7 @@ const modalConfirm = function () {
             });
             setTimeout(() => { document.formulario.submit();}, 1000);// aguardando 2 segundos para envio do formulario. 
           } else {
-            swal("ERRO COM SEU PAGAMENTO !", {
+            swal("PAGAMENTO CANCELADO !", {
               icon: "warning",
             });
           }
@@ -31,6 +31,8 @@ const modalConfirm = function () {
   }
 };
 
+const input = document.querySelector("input")
+console.log(input.hasChildNodes()) // false
 
 
 modalConfirm();
