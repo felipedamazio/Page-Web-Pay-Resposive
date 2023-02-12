@@ -38,7 +38,7 @@
   }
   
   .line {
-    border-bottom: 1px solid #333;
+    border-bottom: 5px dotted #757575;
     position: absolute;
     top: 22.5px;
     width: 90%;
