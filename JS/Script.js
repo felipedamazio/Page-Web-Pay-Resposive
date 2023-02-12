@@ -139,57 +139,7 @@ document.getElementById("exp-year").addEventListener("keyup", function () {
 });
 
 // previnindo evento de envio do formulario
-// document.querySelector("form").addEventListener("click", function (event) {
-//   event.preventDefault();
-// });
 
-const event2 = document.querySelectorAll("button");
-if (event2) {
-  event2.forEach((el) => {
-    el.addEventListener("click", function () {
-      // Método swal para criar os alertas dos dowloads (biblioteca sweetalert) -----------
 
-      swal({
-        title: "FINALIZAR PAGAMENTO?",
-        buttons: ["Não", "Sim"],
-      }).then((willDelete) => {
-        if (willDelete) {
-          swal("PAGAMENTO COM SUCESSO !", {
-            icon: "success",
-          });
-        } else {
-          swal("ERRO COM SEU PAGAMENTO !", {
-            icon: "warning",
-          });
-        }
-      });
-    });
-  });
-}
 
-// timer
 
-function startTimer(duration, display) {
-  var timer = duration,
-    minutes,
-    seconds;
-  setInterval(function () {
-    minutes = parseInt(timer / 60, 10);
-    seconds = parseInt(timer % 60, 10);
-
-    minutes = minutes < 10 ? "0" + minutes : minutes;
-    seconds = seconds < 10 ? "0" + seconds : seconds;
-
-    display.textContent = minutes + ":" + seconds;
-
-    if (--timer < 0) {
-      timer = duration;
-    }
-  }, 1000);
-}
-
-window.onload = function () {
-  var Minutes = 60 * 3,
-    display = document.querySelector("#time");
-  startTimer(Minutes, display);
-};
