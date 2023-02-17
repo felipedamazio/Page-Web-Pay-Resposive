@@ -35,7 +35,6 @@ const form = document.querySelector('form');
 const input = document.querySelectorAll('input')
 form.addEventListener('submit', (event) => {
   event.preventDefault();  
-  removeEventListener
   if  (/!input[0-9]/.value) {
     return;
   }
