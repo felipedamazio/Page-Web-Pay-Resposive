@@ -85,11 +85,7 @@
   
     .step i {
       background-color: #6ec546;
-    }
-  
-    .step .active {
-      background-color: #121214;
-    }
+    }     
   
     .step p {
       display: none;
