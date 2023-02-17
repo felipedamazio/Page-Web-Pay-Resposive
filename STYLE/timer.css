@@ -1,0 +1,12 @@
+header .time-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.2;
+    font-size: 1.2em;
+}
+
+header .time-left span {
+    color: red;
+    font-weight: 900;
+}

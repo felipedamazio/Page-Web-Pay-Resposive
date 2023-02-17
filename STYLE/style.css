@@ -54,12 +54,6 @@ header .logo strong {
     color: var(--main-lighter-color);
 }
 
-header .time-left {
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-    line-height: 1.2;
-}
 
 
 .payment,
