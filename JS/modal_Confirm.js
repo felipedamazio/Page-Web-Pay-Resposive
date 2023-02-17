@@ -2,44 +2,35 @@ const modalConfirm = function () {
   const event2 = document.querySelectorAll(".Pay");
 
   if (event2) {
-    event2.forEach((el) => {
-      el.addEventListener("click", function () {
-        // Método swal para criar os alertas dos dowloads (biblioteca sweetalert) -----------
-        document
-          .querySelector("form")
-          .addEventListener("click", function (event) {
-            event.preventDefault();
-          });
-
-        swal({
-          title: "FINALIZAR PAGAMENTO?",
-          buttons: ["Não", "Sim"],
-        }).then((willDelete) => {
-          if (willDelete) {
-            swal("PAGAMENTO COM SUCESSO !", {
-              icon: "success",
-            });
-            setTimeout(() => { document.formulario.submit();}, 2000);// aguardando 2 segundos para envio do formulario. 
-          } else {
-            swal("PAGAMENTO CANCELADO !", {
-              icon: "warning",
-            });
-          }
+    // Método swal para criar os alertas dos dowloads (biblioteca sweetalert) -----------
+  
+    document.querySelector("form").addEventListener("submit", function (event) {
+      event.preventDefault();
+    });
+    swal({
+      title: "FINALIZAR PAGAMENTO?",
+      buttons: ["Não", "Sim"],
+    }).then((willDelete) => {
+      if (willDelete) {
+        swal("PAGAMENTO COM SUCESSO !", {
+          icon: "success",
         });
-      });
+        setTimeout(() => {
+          document.formulario.submit();
+        }, 2000); // aguardando 2 segundos para envio do formulario.
+      } else {
+        swal("PAGAMENTO CANCELADO !", {
+          icon: "warning",
+        });
+      }
     });
   }
 };
-
-const form = document.querySelector('form');
-const input = document.querySelectorAll('input')
-form.addEventListener('submit', (event) => {
+const input = document.querySelectorAll("input");
+document.querySelector("form").addEventListener("submit", function (event) {
   event.preventDefault();  
-  if  (/!input[0-9]/.value) {
+  if (/!input[0-9]/.value) {
     return;
   }
   modalConfirm();
 });
-
-
-
