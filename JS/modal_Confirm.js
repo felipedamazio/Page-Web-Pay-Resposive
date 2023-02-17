@@ -1,13 +1,11 @@
 const modalConfirm = function () {
   const event2 = document.querySelectorAll(".Pay");
 
-  if (event2) {
+  if (event2) {  
+    
     // Método swal para criar os alertas dos dowloads (biblioteca sweetalert) -----------
   
-    document.querySelector("form").addEventListener("submit", function (event) {
-      event.preventDefault();
-    });
-    swal({
+      swal({
       title: "FINALIZAR PAGAMENTO?",
       buttons: ["Não", "Sim"],
     }).then((willDelete) => {
