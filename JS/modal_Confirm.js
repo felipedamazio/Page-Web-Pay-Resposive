@@ -24,19 +24,19 @@ const input = document.querySelectorAll("input");
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const firstInput = input[0];
+  const firstInput = input[0]; // permite apenas 16 números 
   if (firstInput.value.length < 16) {
     return;
   }
 
   const secondInput = input[1];
-  const secondInputRegex = /^[A-Za-z\s]+$/; // permite letras e espaços
+  const secondInputRegex = /^[A-Za-z\s]+$/; // permite letras e espaços.
   if (!secondInputRegex.test(secondInput.value)) {
     return;
   }
 
   const thirdInput = input[2];
-  const thirdInputRegex = /^\d{3,4}$/; // permite até 4 dígitos numéricos
+  const thirdInputRegex = /^\d{3,4}$/; // permite até 4 dígitos numéricos.
   if (!thirdInputRegex.test(thirdInput.value)) {
     return;
   }
