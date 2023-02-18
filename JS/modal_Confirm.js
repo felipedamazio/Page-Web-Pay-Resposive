@@ -1,33 +1,45 @@
 const modalConfirm = function () {
-  const event2 = document.querySelectorAll(".Pay");
-  if (event2) {
-    swal({
-      title: "FINALIZAR PAGAMENTO?",
-      buttons: ["Não", "Sim"],
-    }).then((willDelete) => {
-      if (willDelete) {
-        swal("PAGAMENTO COM SUCESSO !", {
-          icon: "success",
-        });
-        setTimeout(() => {
-          document.formulario.submit();
-        }, 2000); // aguardando 2 segundos para envio do formulario.
-      } else {
-        swal("PAGAMENTO CANCELADO !", {
-          icon: "warning",
-        });
-      }
-    });
-  }
+  swal({
+    title: "FINALIZAR PAGAMENTO?",
+    buttons: ["Não", "Sim"],
+  }).then((willDelete) => {
+    if (willDelete) {
+      swal("PAGAMENTO COM SUCESSO !", {
+        icon: "success",
+      });
+      setTimeout(() => {
+        document.formulario.submit();
+      }, 2000); // aguardando 2 segundos para envio do formulario.
+    } else {
+      swal("PAGAMENTO CANCELADO !", {
+        icon: "warning",
+      });
+    }
+  });
 };
 
-const form = document.querySelector("form");
+const form = document.querySelector("form[name=formulario]");
 const input = document.querySelectorAll("input");
+
 form.addEventListener("submit", (event) => {
   event.preventDefault();
-  event.preventDefault();
-  if (Array.from(input).some((input) => !input.value)) {
+
+  const firstInput = input[0];
+  if (firstInput.value.length < 16) {
     return;
   }
+
+  const secondInput = input[1];
+  const secondInputRegex = /^[A-Za-z\s]+$/; // permite letras e espaços
+  if (!secondInputRegex.test(secondInput.value)) {
+    return;
+  }
+
+  const thirdInput = input[2];
+  const thirdInputRegex = /^\d{3,4}$/; // permite até 4 dígitos numéricos
+  if (!thirdInputRegex.test(thirdInput.value)) {
+    return;
+  }
+
   modalConfirm();
 });
