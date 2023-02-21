@@ -14,7 +14,7 @@
 
 <h1 align="center">
 <!-- <h1> -->
-<a href="https://felipedamazio.github.io/Page-Web-Pay-Resposive/" target="_blank">Testar</a> 
+<a  target="_blank" href="https://felipedamazio.github.io/Page-Web-Pay-Resposive/">Testar</a> 
 </h1>
 
 ### 🛠 Tecnologias
