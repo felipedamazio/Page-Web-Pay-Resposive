@@ -39,8 +39,17 @@ const modalConfirm = function () {
     const thirdInputRegex = /^\d{3,4}$/; // permite até 4 dígitos numéricos.
     if (!thirdInputRegex.test(thirdInput.value)) {
       return;
-    }
-  
+    }   
+// zerando o timer após envio do form
+
+    window.onload = function () {
+      var Minutes = 60 * 2,
+        display = document.querySelector("#time");
+      startTimer(Minutes, display);
+    };
+
     modalConfirm();
+    let changeColor = document.querySelector('.step .active');
+        changeColor.style.backgroundColor = "#6ec546";
   });
   
