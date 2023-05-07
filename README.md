@@ -14,7 +14,7 @@
 
 <h1 align="center">
 <!-- <h1> -->
-<a href="https://felipedamazio.github.io/Page-Web-Pay-Resposive/" target="_blank">Testar</a> 
+<a  target="_blank" href="https://felipedamazio.github.io/Page-Web-Pay-Resposive/">Testar</a> 
 </h1>
 
 ### 🛠 Tecnologias
@@ -30,7 +30,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 ---
 
 <a href="https://www.linkedin.com/in/felipe-damazio/">
-<img width="200" style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/71530559?v=4"> 
+<img width="200" style="border-radius: 50%;" src="https://media.licdn.com/dms/image/C4D03AQFVFuMXM17RQA/profile-displayphoto-shrink_800_800/0/1661115634710?e=1682553600&v=beta&t=IfxNGSRzc9S2y2ul6tUO6m0jIkfGssOZOV3bdfjxl4U"> 
  
   
 
