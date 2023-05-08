@@ -166,7 +166,7 @@ header .logo strong {
 .payment .card-expiration input{
         text-align: center;
 }
-
+/* 
 .payment form button {
     font-size: var(--font-bigger);
     font-weight: 600;
@@ -183,7 +183,7 @@ header .logo strong {
 .payment form button:hover{
     background-color: var(--button-color);
     color: white;
-}
+} */
 
 .payment .right{
     max-width: 300px;
