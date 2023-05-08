@@ -1,114 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="STYLE/style.css" />
-  <link rel="stylesheet" href="STYLE/Principal.css" />
-  <link rel="stylesheet" href="STYLE/reponsive.css" />
-  <link rel="stylesheet" href="STYLE/magicLine.css" />
-  <link rel="stylesheet" href="STYLE/steps.css" />
-  <link rel="stylesheet" href="STYLE/timer.css" />
-  <link rel="stylesheet" href="STYLE/buttons.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
-  <script src="
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="STYLE/style.css" />
+    <link rel="stylesheet" href="STYLE/Principal.css" />
+    <link rel="stylesheet" href="STYLE/reponsive.css" />
+    <link rel="stylesheet" href="STYLE/magicLine.css" />
+    <link rel="stylesheet" href="STYLE/steps.css" />
+    <link rel="stylesheet" href="STYLE/timer.css" />
+    <link rel="stylesheet" href="STYLE/buttons.css" />
+    <link rel="stylesheet" href="STYLE/truck.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+    <script src="
   https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.all.min.js
   "></script>
 
-  <title>Web Payments</title>
-  <link rel="shortcut icon" href="img/turnover-icon-18.jpg" />
-</head>
+    <title>Web Payments</title>
+    <link rel="shortcut icon" href="img/turnover-icon-18.jpg" />
+  </head>
 
-<body>
-  <div id="steps">
-    <div class="line"></div>
-    <div class="step">
-      <i class="bi bi-person"></i>
-      <p class="">Criar conta</p>
+  <body>
+    <div id="steps">
+      <div class="line"></div>
+      <div class="step">
+        <i class="bi bi-person"></i>
+        <p class="">Criar conta</p>
+      </div>
+      <div class="step">
+        <i class="bi bi-geo-alt"></i>
+        <p class="">Endereço</p>
+      </div>
+      <div class="step">
+        <i class="bi bi-credit-card active"></i>
+        <p class="">Pagamento</p>
+      </div>
     </div>
-    <div class="step">
-      <i class="bi bi-geo-alt"></i>
-      <p class="">Endereço</p>
-    </div>
-    <div class="step">
-      <i class="bi bi-credit-card active"></i>
-      <p class="">Pagamento</p>
-    </div>
-  </div>
-  <div id="page" class="site">
-    <div class="container">
-      <div class="outer">
-        <header>
-          <div class="logo">
-            <a href="#"><strong>.Web</strong>Pay</a>
-          </div>
-          <div class="time-left">
-            <time id="time">02:00</time>
-            <span>Timer</span>
-          </div>
-        </header>
-        <section class="payment">
-          <div class="left">
-            <form name="formulario" action="" method="get">
-              <div class="card-number">
-                <p>Card Number</p>
-                <span>Enter the 16-digit card number on the card</span>
-                <div class="card-number-box">
-                  <input type="text" id="credit-card" autocomplete="off" placeholder="xxxx - xxxx - xxxx - xxxx"
-                    required />
-                  <span class="cc-logo"></span>
+    <div id="page" class="site">
+      <div class="container">
+        <div class="outer">
+          <header>
+            <div class="logo">
+              <a href="#"><strong>.Web</strong>Pay</a>
+            </div>
+            <div class="time-left">
+              <time id="time">02:00</time>
+              <span>Timer</span>
+            </div>
+          </header>
+          <section class="payment">
+            <div class="left">
+              <form name="formulario" action="" method="get">
+                <div class="card-number">
+                  <p>Card Number</p>
+                  <span>Enter the 16-digit card number on the card</span>
+                  <div class="card-number-box">
+                    <input
+                      type="text"
+                      id="credit-card"
+                      autocomplete="off"
+                      placeholder="xxxx - xxxx - xxxx - xxxx"
+                      required
+                    />
+                    <span class="cc-logo"></span>
+                  </div>
+                </div>
+                <div class="card-holder">
+                  <div class="text">
+                    <p>Card Name Holder</p>
+                    <span>Enter name card holder on the card</span>
+                  </div>
+                  <div class="input">
+                    <input
+                      type="text"
+                      id="card.name"
+                      autocomplete="off"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="card-cvv">
+                  <div class="text">
+                    <p>CVV Number</p>
+                    <span>Enter the 3 or 4 digits number on the card</span>
+                  </div>
+                  <div class="input">
+                    <input
+                      type="number"
+                      data-maxlength="4"
+                      required
+                      oninput="this.value=this.value.slice(0,this.dataset.maxlength)"
+                    />
+                  </div>
+                </div>
+                <div class="card-expiration">
+                  <div class="text">
+                    <p>Expiry Date</p>
+                    <span>Enter the expiration date of the card</span>
+                  </div>
+                  <div class="input">
+                    <input
+                      type="number"
+                      id="exp-month"
+                      placeholder="MM"
+                      data-maxlength="2"
+                      required
+                      oninput="this.value=this.value.slice(0,this.dataset.maxlength)"
+                    />
+                    <strong> / </strong>
+                    <input
+                      type="number"
+                      id="exp-year"
+                      placeholder="YY"
+                      data-maxlength="2"
+                      required
+                      oninput="this.value=this.value.slice(0,this.dataset.maxlength)"
+                    />
+                  </div>
+                </div>
+                <button class="Pay">PAY NOW</button>
+              </form>
+              <div class="truck-order">
+                <span class="default">Complete Order</span>
+                <span class="success">
+                  Order Placed
+                  <svg viewbox="0 0 12 10">
+                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                  </svg>
+                </span>
+                <div class="truck">
+                  <div class="wheel"></div>
+                  <div class="back"></div>
+                  <div class="front"></div>
+                  <div class="box"></div>
                 </div>
               </div>
-              <div class="card-holder">
-                <div class="text">
-                  <p>Card Name Holder</p>
-                  <span>Enter name card holder on the card</span>
-                </div>
-                <div class="input">
-                  <input type="text" id="card.name" autocomplete="off" required />
-                </div>
-              </div>
-              <div class="card-cvv">
-                <div class="text">
-                  <p>CVV Number</p>
-                  <span>Enter the 3 or 4 digits number on the card</span>
-                </div>
-                <div class="input">
-                  <input type="number" data-maxlength="4" required
-                    oninput="this.value=this.value.slice(0,this.dataset.maxlength)" />
-                </div>
-              </div>
-              <div class="card-expiration">
-                <div class="text">
-                  <p>Expiry Date</p>
-                  <span>Enter the expiration date of the card</span>
-                </div>
-                <div class="input">
-                  <input type="number" id="exp-month" placeholder="MM" data-maxlength="2" required
-                    oninput="this.value=this.value.slice(0,this.dataset.maxlength)" />
-                  <strong> / </strong>
-                  <input type="number" id="exp-year" placeholder="YY" data-maxlength="2" required
-                    oninput="this.value=this.value.slice(0,this.dataset.maxlength)" />
-                </div>
-              </div>
-              <button class="Pay">
-                PAY NOW
-              </button>
-            </form>
-          </div>
-          <div class="right">
-            <div class="card-virtual">
-              <p class="cc-logo"></p>
-              <p class="name-holder">Your name</p>
-              <p class="chip">
-                <?xml version="1.0" encoding="iso-8859-1"?>
-                <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 511 511"
-                  style="enable-background: new 0 0 511 511" xml:space="preserve">
-                  <path d="M455.5,56h-400C24.897,56,0,80.897,0,111.5v288C0,430.103,24.897,455,55.5,455h400c30.603,0,55.5-24.897,55.5-55.5v-288
+            </div>
+            <div class="right">
+              <div class="card-virtual">
+                <p class="cc-logo"></p>
+                <p class="name-holder">Your name</p>
+                <p class="chip">
+                  <?xml version="1.0" encoding="iso-8859-1"?>
+                  <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                  <svg
+                    version="1.1"
+                    id="Capa_1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    x="0px"
+                    y="0px"
+                    viewBox="0 0 511 511"
+                    style="enable-background: new 0 0 511 511"
+                    xml:space="preserve"
+                  >
+                    <path
+                      d="M455.5,56h-400C24.897,56,0,80.897,0,111.5v288C0,430.103,24.897,455,55.5,455h400c30.603,0,55.5-24.897,55.5-55.5v-288
                                     C511,80.897,486.103,56,455.5,56z M464,248H343v-56.5c0-4.687,3.813-8.5,8.5-8.5H464V248z M343,263h121v65H343V263z M479,223h17v65
                                     h-17V223z M479,208v-65h17v65H479z M464,168H351.5c-12.958,0-23.5,10.542-23.5,23.5V408H183V103h272.5c4.687,0,8.5,3.813,8.5,8.5
                                     V168z M168,248H47v-65h121V248z M32,288H15v-65h17V288z M47,263h121v65H47V263z M263,88V71h137v17H263z M248,88H111V71h137V88z
@@ -117,47 +168,52 @@
                                     c0,4.687-3.813,8.5-8.5,8.5H343z M479,303h17v65h-17V303z M496,111.5V128h-17v-16.5c0-12.958-10.542-23.5-23.5-23.5H415V71h40.5
                                     C477.832,71,496,89.168,496,111.5z M55.5,71H96v17H55.5C42.542,88,32,98.542,32,111.5V128H15v-16.5C15,89.168,33.168,71,55.5,71z
                                      M15,399.5V383h17v16.5c0,12.958,10.542,23.5,23.5,23.5H96v17H55.5C33.168,440,15,421.832,15,399.5z M455.5,440H415v-17h40.5
-                                    c12.958,0,23.5-10.542,23.5-23.5V383h17v16.5C496,421.832,477.832,440,455.5,440z" />
-                </svg>
-              </p>
-              <p class="highlight">
-                <span class="last-digit" id="card-number">.... .... .... xxxx</span>
-                <span class="expiry">
-                  <span class="exp-month">mm</span> /
-                  <span class="exp-year">yy</span>
-                </span>
-              </p>
-            </div>
-            <div class="receipt">
-              <ul>
-                <li>
-                  <span>Order Number</span>
-                  <span>05092022 </span>
-                </li>
-                <li>
-                  <span>Product</span>
-                  <span>Iphone 14 Pro Max </span>
-                </li>
-                <li>
-                  <span>Vat (10%)</span>
-                  <span>$100.00</span>
-                </li>
-              </ul>
-              <div class="">
-                <p class="price"><strong>1.255</strong>USD</p>
-                <p>Total you have to pay</p>
+                                    c12.958,0,23.5-10.542,23.5-23.5V383h17v16.5C496,421.832,477.832,440,455.5,440z"
+                    />
+                  </svg>
+                </p>
+                <p class="highlight">
+                  <span class="last-digit" id="card-number"
+                    >.... .... .... xxxx</span
+                  >
+                  <span class="expiry">
+                    <span class="exp-month">mm</span> /
+                    <span class="exp-year">yy</span>
+                  </span>
+                </p>
+              </div>
+              <div class="receipt">
+                <ul>
+                  <li>
+                    <span>Order Number</span>
+                    <span>05092022 </span>
+                  </li>
+                  <li>
+                    <span>Product</span>
+                    <span>Iphone 14 Pro Max </span>
+                  </li>
+                  <li>
+                    <span>Vat (10%)</span>
+                    <span>$100.00</span>
+                  </li>
+                </ul>
+                <div class="">
+                  <p class="price"><strong>1.255</strong>USD</p>
+                  <p>Total you have to pay</p>
+                </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </div>
       </div>
     </div>
-  </div>
 
-  <script src="JS/Script.js"></script>
-  <script src="JS/confirmModal.js"></script>
-  <script src="JS/Timer.js"></script>
-  <script src="JS/RechargeDocument.js"></script>
-</body>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script src="JS/Script.js"></script>
+    <script src="JS/confirmModal.js"></script>
+    <script src="JS/Timer.js"></script>
+    <script src="JS/RechargeDocument.js"></script>
+    <script src="JS/truck.js"></script>
+  </body>
 </html>

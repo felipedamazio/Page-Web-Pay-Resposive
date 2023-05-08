@@ -8,7 +8,7 @@ const modalConfirm = function () {
 
   swalWithBootstrapButtons.fire({
     title: 'Confirmar pagamento?',
-    text: "Ao comfirmar o pagamento será efetuado!",
+    text: "Ao confirmar... O pagamento será efetuado!",
     icon: 'warning',
     showCancelButton: true,
     confirmButtonColor: '#3085d6',
@@ -22,8 +22,9 @@ const modalConfirm = function () {
         'Pronto!',
         'Seu pagamento foi efetuado com sucesso.',
         'success'
-      )
-      setTimeout(() => {
+      ),
+      truckOrder(); 
+      setTimeout(() => { 
         document.formulario.submit();
       }, 3000); // aguardando 2 segundos para envio do formulario.
     } else if (
@@ -32,7 +33,7 @@ const modalConfirm = function () {
     ) {
       swalWithBootstrapButtons.fire(
         'Poxa :(',
-        'Seu pagemento foi cancelado.)',
+        'Seu pagamento foi cancelado.)',
         'error'
       )
     }
