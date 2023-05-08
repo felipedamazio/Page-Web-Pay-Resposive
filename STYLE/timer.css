@@ -10,3 +10,7 @@ header .time-left span {
     color: red;
     font-weight: 900;
 }
+
+.loading{
+    font-size: 0.7em;
+}
