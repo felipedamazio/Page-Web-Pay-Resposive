@@ -26,7 +26,6 @@
   border: none;
   outline: none;
   color: var(--color);
-  background: var(--background);
   border-radius: var(--br, 5px);
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -35,6 +34,8 @@
   transform-style: preserve-3d;
   transform: rotateX(var(--rx, 0deg)) translateZ(0);
   transition: transform 0.5s, border-radius 0.3s linear var(--br-d, 0s);
+  top: 1.5em;
+  left: 9em;
 }
 .truck-order:before, .truck-order:after {
   content: "";

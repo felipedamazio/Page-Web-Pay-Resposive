@@ -23,10 +23,10 @@ const modalConfirm = function () {
         'Seu pagamento foi efetuado com sucesso.',
         'success'
       ),
-      truckOrder(); 
+      truckOrder(); // chama função da animação do caminhão 
       setTimeout(() => { 
-        document.formulario.submit();
-      }, 3000); // aguardando 2 segundos para envio do formulario.
+        document.formulario.submit();        
+      }, 8000); // aguardando 2 segundos para envio do formulario.
     } else if (
       /* Read more about handling dismissals below */
       result.dismiss === Swal.DismissReason.cancel
@@ -40,7 +40,7 @@ const modalConfirm = function () {
   })
 };
 
-
+// let confirmButton = document.querySelector('.btn-success'); // botao de comfirmação do modal
 const form = document.querySelector("form[name=formulario]");
 const input = document.querySelectorAll("input");
 
