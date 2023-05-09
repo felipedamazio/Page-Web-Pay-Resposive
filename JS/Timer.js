@@ -18,7 +18,7 @@ function startTimer(duration, display) {
   }, 1000); 
 
   // Chamando a função de recarregar documento a cada x segundos 
-  setInterval(rechargePage, 120000);
+  setInterval(rechargePage, 121000); 
 }
 
 window.onload = function () {
