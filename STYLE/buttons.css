@@ -61,3 +61,19 @@
     box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #25b69e;
     
   }
+
+  @media (max-width: 780px) {
+    
+  }
+
+
+  @media (max-width: 420px) {
+    .payment form button:not(.truck-button){
+      width: 9em;
+      height: 2em;
+      margin: 0 auto;
+      font-size: 2em;
+      padding: 0em;
+    }
+
+  }
