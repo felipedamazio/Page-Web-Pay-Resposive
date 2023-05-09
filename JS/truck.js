@@ -103,6 +103,8 @@ function truckOrder() {
             }
             // scrol da pagina para cima
             window.scrollTo(5, document.body.scrollTop);
+          
+           
 
         });
     });
