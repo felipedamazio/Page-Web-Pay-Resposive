@@ -1,26 +1,28 @@
-
-
-
-
-*{
+* {
     margin: 0;
     padding: 0;
-   
-   }
-   *,::before,::after{
-       box-sizing: border-box;
-   }
-   html{
-       scroll-behavior: smooth;
-   }
-   
-   body{
-       display: flex; 
-       font-family: 'Nunito',sans-serif;
-       font-size: 14px;
-       font-weight: 400;       
-       color: var(--dark-color);
-       background-color:#f9f5f5;       
-       flex-direction: column;
-       align-items: center;
-   }
+
+}
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--dark-color);
+    background-color: #f9f5f5;
+    flex-direction: column;
+    align-items: center;   
+    width: 100vw;
+    height: 100vh;
+}

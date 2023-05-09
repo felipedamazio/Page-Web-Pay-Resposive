@@ -21,12 +21,12 @@ const modalConfirm = function () {
       swalWithBootstrapButtons.fire(
         'Pronto!',
         'Seu pagamento foi efetuado com sucesso.',
-        'success'
-      ),
+        'success'     
+      ),      
       truckOrder(); // chama função da animação do caminhão 
-      setTimeout(() => { 
-        document.formulario.submit();        
-      }, 8000); // aguardando 2 segundos para envio do formulario.
+      // setTimeout(() => { 
+      //   document.formulario.submit();        
+      // }, 8000); // aguardando 2 segundos para envio do formulario.
     } else if (
       /* Read more about handling dismissals below */
       result.dismiss === Swal.DismissReason.cancel

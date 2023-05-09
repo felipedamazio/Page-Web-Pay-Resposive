@@ -101,7 +101,13 @@ function truckOrder() {
                     y: -6
                 });
             }
+            // scrol da pagina para cima
+            window.scrollTo(5, document.body.scrollTop);
 
         });
     });
+
+    // const el = querySelector(".truck-order");
+    // window.scrollTo(0, document.el.scrollTop);
+
 }
