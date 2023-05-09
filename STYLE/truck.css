@@ -252,3 +252,14 @@ html {
 *:before, *:after {
   box-sizing: inherit;
 }/*# sourceMappingURL=truck.css.map */
+
+
+
+@media (max-width: 420px) {
+  
+  .truck-order{
+    margin: 0 auto;
+    position: relative;
+    left: 0;
+  }
+}
