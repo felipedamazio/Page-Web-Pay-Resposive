@@ -101,10 +101,13 @@ function truckOrder() {
                     y: -6
                 });
             }
-            // scrol da pagina para cima
-            window.scrollTo(5, document.body.scrollTop);
-          
-           
+            setTimeout(() => {
+                audioOrder();
+            }, 4000);
+            // função som de envio 
+
+            window.scrollTo(0, document.body.scrollTop); // scrol da pagina para cima   
+
 
         });
     });

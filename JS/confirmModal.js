@@ -3,7 +3,7 @@ const modalConfirm = function () {
     customClass: {
       confirmButton: 'btn btn-success',
       cancelButton: 'btn btn-danger'
-    }    
+    }
   })
 
   swalWithBootstrapButtons.fire({
@@ -17,15 +17,15 @@ const modalConfirm = function () {
     cancelButtonText: 'Não, cancelar!',
     reverseButtons: true
   }).then((result) => {
-    if (result.isConfirmed) {      
+    if (result.isConfirmed) {
       swalWithBootstrapButtons.fire(
         'Pronto!',
         'Seu pagamento foi efetuado com sucesso.',
-        'success'     
-      ),      
-      truckOrder(); // chama função da animação do caminhão 
-      setTimeout(() => { 
-        document.formulario.submit();        
+        'success'
+      ),
+        truckOrder(); // chama função da animação do caminhão     
+      setTimeout(() => {
+        document.formulario.submit();
       }, 8000); // aguardando 2 segundos para envio do formulario.
     } else if (
       /* Read more about handling dismissals below */
@@ -40,7 +40,7 @@ const modalConfirm = function () {
   })
 };
 
-// let confirmButton = document.querySelector('.btn-success'); // botao de comfirmação do modal
+
 const form = document.querySelector("form[name=formulario]");
 const input = document.querySelectorAll("input");
 
