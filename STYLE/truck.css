@@ -34,12 +34,10 @@
   transform-style: preserve-3d;
   transform: rotateX(var(--rx, 0deg)) translateZ(0);
   transition: transform 0.5s, border-radius 0.3s linear var(--br-d, 0s);
-  top: 4.5em;
+  top: 8.5em;
   z-index: 2;
 }
-
-.truck-order:before,
-.truck-order:after {
+.truck-order:before, .truck-order:after {
   content: "";
   position: absolute;
   left: 0;
@@ -51,12 +49,10 @@
   transform-origin: 0 100%;
   transform: rotateX(90deg) scaleX(var(--sy, 1));
 }
-
 .truck-order:after {
   --sy: var(--progress, 0);
   --b: var(--street-fill);
 }
-
 .truck-order .default,
 .truck-order .success {
   display: block;
@@ -66,10 +62,9 @@
   opacity: var(--o, 1);
   transition: opacity 0.3s;
   padding: 25px;
-  background-color: #b8bbcc62;
+  background-color: rgba(126, 219, 83, 0.4117647059);
   border-radius: 10px;
 }
-
 .truck-order .success {
   --o: 0;
   position: absolute;
@@ -77,7 +72,6 @@
   left: 0;
   right: 0;
 }
-
 .truck-order .success svg {
   width: 3.5em;
   height: 1.5em;
@@ -93,20 +87,17 @@
   stroke-dashoffset: var(--offset, 16px);
   transition: stroke-dashoffset 0.4s ease 0.45s;
 }
-
 .truck-order .truck {
   position: absolute;
   width: 144px;
   height: 30px;
   transform: rotateX(90deg) translate3d(var(--truck-x, 4px), calc(var(--truck-y-n, -26) * 1px), 12px);
 }
-
-.truck-order .truck:before,
-.truck-order .truck:after {
+.truck-order .truck:before, .truck-order .truck:after {
   content: "";
   position: absolute;
   bottom: -6px;
-  left: var(--l, 20px);
+  left: var(--l, 18px);
   width: 20px;
   height: 20px;
   border-radius: 50%;
@@ -115,11 +106,9 @@
   background: var(--wheel-dot);
   transform: translateY(calc(var(--truck-y) * -1px)) translateZ(0);
 }
-
 .truck-order .truck:after {
   --l: 98px;
 }
-
 .truck-order .truck .wheel,
 .truck-order .truck .wheel:before {
   position: absolute;
@@ -131,23 +120,19 @@
   background: var(--wheel);
   transform: translateZ(0);
 }
-
 .truck-order .truck .wheel {
   transform: translateY(calc(var(--truck-y) * -1px)) translateZ(0);
 }
-
 .truck-order .truck .wheel:before {
   --l: 70px;
   --b: 0;
   content: "";
 }
-
 .truck-order .truck .front,
 .truck-order .truck .back,
 .truck-order .truck .box {
   position: absolute;
 }
-
 .truck-order .truck .back {
   left: 0;
   bottom: 0;
@@ -157,13 +142,10 @@
   border-radius: 1px 1px 0 0;
   background: linear-gradient(68deg, var(--back-inner) 0%, var(--back-inner) 22%, var(--back-inner-shadow) 22.1%, var(--back-inner-shadow) 100%);
 }
-
-.truck-order .truck .back:before,
-.truck-order .truck .back:after {
+.truck-order .truck .back:before, .truck-order .truck .back:after {
   content: "";
   position: absolute;
 }
-
 .truck-order .truck .back:before {
   left: 11px;
   top: 0;
@@ -173,7 +155,6 @@
   border-radius: 0 1px 0 0;
   background: var(--back);
 }
-
 .truck-order .truck .back:after {
   border-radius: 1px;
   width: 146px;
@@ -182,7 +163,6 @@
   bottom: -2px;
   background: var(--base);
 }
-
 .truck-order .truck .front {
   left: 94px;
   bottom: -1px;
@@ -192,13 +172,10 @@
   clip-path: polygon(55% 0, 72% 44%, 100% 58%, 100% 100%, 0 100%, 0 0);
   background: linear-gradient(84deg, var(--front-shadow) 0%, var(--front-shadow) 10%, var(--front) 12%, var(--front) 100%);
 }
-
-.truck-order .truck .front:before,
-.truck-order .truck .front:after {
+.truck-order .truck .front:before, .truck-order .truck .front:after {
   content: "";
   position: absolute;
 }
-
 .truck-order .truck .front:before {
   width: 25px;
   height: 15px;
@@ -208,7 +185,6 @@
   clip-path: polygon(0 0, 60% 0%, 100% 100%, 0% 100%);
   background: linear-gradient(59deg, var(--window) 0%, var(--window) 57%, var(--window-shadow) 55%, var(--window-shadow) 100%);
 }
-
 .truck-order .truck .front:after {
   width: 8px;
   height: 4px;
@@ -216,7 +192,6 @@
   bottom: 6px;
   background: var(--front-light);
 }
-
 .truck-order .truck .box {
   width: 26px;
   height: 26px;
@@ -231,13 +206,10 @@
   background-size: 250% 100%;
   background-position-x: calc(var(--bx, 0) * 1%);
 }
-
-.truck-order .truck .box:before,
-.truck-order .truck .box:after {
+.truck-order .truck .box:before, .truck-order .truck .box:after {
   content: "";
   position: absolute;
 }
-
 .truck-order .truck .box:before {
   content: "";
   background: rgba(255, 255, 255, 0.2);
@@ -246,7 +218,6 @@
   top: 6px;
   height: 1px;
 }
-
 .truck-order .truck .box:after {
   width: 6px;
   left: 100%;
@@ -255,22 +226,18 @@
   background: var(--back);
   transform: translateX(calc(var(--hx, 0) * 1px));
 }
-
 .truck-order.animation {
   --rx: -90deg;
   --br: 0;
 }
-
 .truck-order.animation .default {
   --o: 0;
 }
-
 .truck-order.animation.done {
   --rx: 0deg;
   --br: 5px;
   --br-d: .2s;
 }
-
 .truck-order.animation.done .success {
   --o: 1;
   --offset: 0;
@@ -284,29 +251,20 @@ html {
 * {
   box-sizing: inherit;
 }
-
-*:before,
-*:after {
+*:before, *:after {
   box-sizing: inherit;
 }
 
-/*# sourceMappingURL=truck.css.map */
-
-
-
 @media (max-width: 420px) {
-
   .truck-order {
     margin: 0 auto;
     position: relative;
     left: 0;
   }
-
   .truck-order {
     width: 20em;
   }
-
   .truck-order .success {
     font-size: 2.5em;
   }
-}
+}/*# sourceMappingURL=truck.css.map */

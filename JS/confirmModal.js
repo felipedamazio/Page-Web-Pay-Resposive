@@ -9,7 +9,7 @@ const modalConfirm = function () {
   swalWithBootstrapButtons.fire({
     title: 'Confirmar pagamento?',
     text: "Ao confirmar... O pagamento será efetuado!",
-    icon: 'warning',
+    icon: 'question',
     showCancelButton: true,
     confirmButtonColor: '#3085d6',
     cancelButtonColor: '#d33',
@@ -18,19 +18,31 @@ const modalConfirm = function () {
     reverseButtons: true
   }).then((result) => {
     if (result.isConfirmed) {
-      swalWithBootstrapButtons.fire(
-        'Pronto!',
-        'Seu pagamento foi efetuado com sucesso.',
-        'success'
-      ),
-        truckOrder(); // chama função da animação do caminhão     
-      setTimeout(() => {
-        document.formulario.submit();
-      }, 8000); // aguardando 2 segundos para envio do formulario.
-    } else if (
-      /* Read more about handling dismissals below */
-      result.dismiss === Swal.DismissReason.cancel
-    ) {
+      let timerInterval
+      Swal.fire({
+        title: 'Processando pagamento',
+        icon: 'success',
+        html: 'Seu Pedido será concluido em <b></b>.',
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: () => {
+          Swal.showLoading()
+          const b = Swal.getHtmlContainer().querySelector('b')
+          timerInterval = setInterval(() => {
+            b.textContent = Swal.getTimerLeft()
+          }, 100)
+        },
+        willClose: () => {
+          clearInterval(timerInterval)
+        }
+      }).then((result) => {        
+        if (result.dismiss === Swal.DismissReason.timer) {
+          placeOrder(); // chama função da animação do caminhão som de confirmação e envio do formulario ...
+
+        }
+      })
+
+    } else if (result.dismiss === Swal.DismissReason.cancel) {
       swalWithBootstrapButtons.fire(
         'Poxa :(',
         'Seu pagamento foi cancelado.)',
@@ -39,6 +51,7 @@ const modalConfirm = function () {
     }
   })
 };
+
 
 
 const form = document.querySelector("form[name=formulario]");

@@ -18,24 +18,24 @@
     --street-fill: #404660;
     --box: #DCB97A;
     --box-shadow: #B89B66;
-    
     padding: 12px 0;
-    width: 172px;
+    width: 30em;
     cursor: pointer;
     text-align: center;
     position: relative;
     border: none;
     outline: none;
-    color: var(--color);    
+    color: var(--color);
     border-radius: var(--br, 5px);
     -webkit-appearance: none;
+    -moz-appearance: none;
     appearance: none;
     -webkit-tap-highlight-color: transparent;
     transform-style: preserve-3d;
     transform: rotateX(var(--rx, 0deg)) translateZ(0);
-    transition: transform .5s, border-radius .3s linear var(--br-d, 0s);
-    top: 1.5em;
-    left: 9em;
+    transition: transform 0.5s, border-radius 0.3s linear var(--br-d, 0s);
+    top: 8.5em;
+    z-index: 2;
 
     &:before,
     &:after {
@@ -60,10 +60,13 @@
     .success {
         display: block;
         font-weight: 500;
-        font-size: 14px;
+        font-size: 4em;
         line-height: 24px;
         opacity: var(--o, 1);
         transition: opacity .3s;
+        padding: 25px;
+        background-color: #7edb5369;
+        border-radius: 10px;
     }
 
     .success {
@@ -74,8 +77,8 @@
         right: 0;
 
         svg {
-            width: 12px;
-            height: 10px;
+            width: 3.5em;
+            height: 1.5em;
             display: inline-block;
             vertical-align: top;
             fill: none;
@@ -92,8 +95,8 @@
 
     .truck {
         position: absolute;
-        width: 72px;
-        height: 28px;
+        width: 144px;
+        height: 30px;
         transform: rotateX(90deg) translate3d(var(--truck-x, 4px), calc(var(--truck-y-n, -26) * 1px), 12px);
 
         &:before,
@@ -102,8 +105,8 @@
             position: absolute;
             bottom: -6px;
             left: var(--l, 18px);
-            width: 10px;
-            height: 10px;
+            width: 20px;
+            height: 20px;
             border-radius: 50%;
             z-index: 2;
             box-shadow: inset 0 0 0 2px var(--wheel), inset 0 0 0 4px var(--wheel-inner);
@@ -112,16 +115,16 @@
         }
 
         &:after {
-            --l: 54px;
+            --l: 98px;
         }
 
         .wheel,
         .wheel:before {
             position: absolute;
             bottom: var(--b, -6px);
-            left: var(--l, 6px);
-            width: 10px;
-            height: 10px;
+            left: var(--l, 16px);
+            width: 20px;
+            height: 20px;
             border-radius: 50%;
             background: var(--wheel);
             transform: translateZ(0);
@@ -132,7 +135,7 @@
         }
 
         .wheel:before {
-            --l: 35px;
+            --l: 70px;
             --b: 0;
             content: '';
         }
@@ -147,8 +150,8 @@
             left: 0;
             bottom: 0;
             z-index: 1;
-            width: 47px;
-            height: 28px;
+            width: 94px;
+            height: 56px;
             border-radius: 1px 1px 0 0;
             background: linear-gradient(68deg, var(--back-inner) 0%, var(--back-inner) 22%, var(--back-inner-shadow) 22.1%, var(--back-inner-shadow) 100%);
 
@@ -170,8 +173,8 @@
 
             &:after {
                 border-radius: 1px;
-                width: 73px;
-                height: 2px;
+                width: 146px;
+                height: 4px;
                 left: -1px;
                 bottom: -2px;
                 background: var(--base);
@@ -179,10 +182,10 @@
         }
 
         .front {
-            left: 47px;
+            left: 94px;
             bottom: -1px;
-            height: 22px;
-            width: 24px;
+            height: 44px;
+            width: 48px;
             -webkit-clip-path: polygon(55% 0, 72% 44%, 100% 58%, 100% 100%, 0 100%, 0 0);
             clip-path: polygon(55% 0, 72% 44%, 100% 58%, 100% 100%, 0 100%, 0 0);
             background: linear-gradient(84deg, var(--front-shadow) 0%, var(--front-shadow) 10%, var(--front) 12%, var(--front) 100%);
@@ -194,29 +197,28 @@
             }
 
             &:before {
-                width: 7px;
-                height: 8px;
-                background: #fff;
-                left: 7px;
-                top: 2px;
+                width: 25px;
+                height: 15px;
+                left: 5px;
+                top: 4px;
                 -webkit-clip-path: polygon(0 0, 60% 0%, 100% 100%, 0% 100%);
                 clip-path: polygon(0 0, 60% 0%, 100% 100%, 0% 100%);
                 background: linear-gradient(59deg, var(--window) 0%, var(--window) 57%, var(--window-shadow) 55%, var(--window-shadow) 100%)
             }
 
             &:after {
-                width: 3px;
-                height: 2px;
+                width: 8px;
+                height: 4px;
                 right: 0;
-                bottom: 3px;
+                bottom: 6px;
                 background: var(--front-light);
             }
         }
 
         .box {
-            width: 13px;
-            height: 13px;
-            right: 56px;
+            width: 26px;
+            height: 26px;
+            right: 122px;
             bottom: 0;
             z-index: 1;
             border-radius: 1px;
@@ -285,5 +287,22 @@ html {
     &:before,
     &:after {
         box-sizing: inherit;
+    }
+}
+
+@media (max-width: 420px) {
+
+    .truck-order {
+        margin: 0 auto;
+        position: relative;
+        left: 0;
+    }
+
+    .truck-order {
+        width: 20em;
+    }
+
+    .truck-order .success {
+        font-size: 2.5em;
     }
 }
