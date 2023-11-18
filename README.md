@@ -11,15 +11,11 @@
 <p align="center">WEB PAYMENTS PAGE </p>
 <p align="center"> Projeto de uma pagina final de processamento de pagamentos - PROJETO EM ANDAMENTO !!! </p>
 
-<h1 align="center">
+<h1 align="center"> 
  
- [![Deploy with Vercel](https://vercel.com/button)](https://felipedamazio.github.io/Page-Web-Pay-Resposive/)
- 
-
+ [![Deploy with Vercel](https://vercel.com/button)](https://felipedamazio.github.io/Page-Web-Pay-Resposive/) 
 <h1/>
-
-
-
+ 
 ### 🛠 Tecnologias
 As seguintes ferramentas foram usadas na construção do projeto:
 <br>
