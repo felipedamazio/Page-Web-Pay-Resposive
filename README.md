@@ -7,14 +7,16 @@
 ![WepPay(ReadMe)](https://user-images.githubusercontent.com/71530559/194736029-b4c8bec5-6240-4e91-8913-795dd69db1b8.png)
 
 
-# Descrição do Projeto
+## Descrição do Projeto
 <p align="center">WEB PAYMENTS PAGE </p>
 <p align="center"> Projeto de uma pagina final de processamento de pagamentos - PROJETO EM ANDAMENTO !!! </p>
 
-<h1 align="center"> 
- 
- [![Deploy with Vercel](https://vercel.com/button)](https://felipedamazio.github.io/Page-Web-Pay-Resposive/) 
-<h1/>
+
+
+<h1 align="center">
+
+ [![Deploy with Vercel](https://vercel.com/button)](https://felipedamazio.github.io/Page-Web-Pay-Resposive/)
+</h1>
  
 ### 🛠 Tecnologias
 As seguintes ferramentas foram usadas na construção do projeto:
